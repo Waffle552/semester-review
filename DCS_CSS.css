@@ -1,0 +1,69 @@
+body {
+       background-color:black;
+       padding: 50px;
+       padding-top: 0px;
+       padding-right: 0px;
+       
+     }
+
+     h1 {
+
+       color: #00ccff;
+       font-size: 400%;
+     }
+
+     p {
+       color: white;
+       font-family: "Comic Sans MS";
+       font-size: 120%;
+     }
+   ul {
+
+     color:white;
+     font-size: 105%;
+     font-family: "Comic Sans MS";
+
+     }
+   .nav {
+    
+     background-color: #262626;
+     border: 0px;
+     color:#00ccff;
+     width:150px;
+     height: 50px;
+     margin: 3px;
+     font-size:105%;
+
+    }
+
+
+    .nav:hover{
+
+    background-color:#303030;
+   
+    }   
+    
+    .nav_box {
+    
+    background-color:#1a1a1a;
+    padding: 10px;
+    margin-right:300px;
+    border: solid #080808 4px;
+   }
+
+.elct {
+
+background-color:#1a1a1a;
+border: solid #080808 4px;
+padding: 0px;
+    
+}
+#book_list {
+
+float: right;
+margin-top: 300px;
+width: 280px;
+background-color: #1a1a1a;
+padding: 10px;
+
+}
