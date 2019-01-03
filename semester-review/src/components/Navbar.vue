@@ -2,7 +2,7 @@
   <div id="nav">
     <ul>
       <li>
-        <router-link to="/home">
+        <router-link to="/">
           <img src="@/assets/logo.png" alt="logo">
         </router-link>
       </li>
@@ -12,13 +12,13 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/vaults">
-          <button class="navButton">Vaults</button>
+        <router-link to="/math">
+          <button class="navButton">Math</button>
         </router-link>
       </li>
       <li>
-        <router-link to="/rules">
-          <button class="navButton">Rules</button>
+        <router-link to="/ela">
+          <button class="navButton">ELA</button>
         </router-link>
       </li>
        <li>
@@ -30,7 +30,7 @@
 </template>
 <script>
 export default {
-  name: "Navbar"
+  name: 'Navbar'
 };
 </script>
 <style>
@@ -61,7 +61,7 @@ ul {
 .navButton:hover {
   background-color: #303030;
 }
-img {
+a > img {
   height: 50px;
   float: left;
   margin-left: 10px;
