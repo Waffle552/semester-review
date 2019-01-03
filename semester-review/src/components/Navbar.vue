@@ -21,9 +21,15 @@
           <button class="navButton">ELA</button>
         </router-link>
       </li>
-       <li>
-        <!-- On click, this button will make chat application slide out-->
-        <button class="navButton" onclick="toggleChat">Chat</button>
+      <li>
+        <router-link to="/science">
+          <button class="navButton">Science</button>
+        </router-link>
+      </li>
+      <li>
+        <router-link to="/ss">
+          <button class="navButton">SS</button>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -31,7 +37,7 @@
 <script>
 export default {
   name: 'Navbar'
-};
+}
 </script>
 <style>
 li {
@@ -51,7 +57,7 @@ ul {
 .navButton {
   background-color: #262626;
   border: 0px;
-  color: #029902;
+  color: #ffd700;
   width: 150px;
   height: 50px;
   margin: 3px;
@@ -65,5 +71,6 @@ a > img {
   height: 50px;
   float: left;
   margin-left: 10px;
+  margin-top: 3px;
 }
 </style>
