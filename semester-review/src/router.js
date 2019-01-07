@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import math from './views/Math.vue'
 import ela from './views/ELA.vue'
+import ss from './views/SS.vue'
+import science from './views/Science.vue'
+import dev from './views/Dev.vue'
 
 Vue.use(Router)
 
@@ -20,8 +23,23 @@ export default new Router({
     },
     {
       path: '/ela',
-      name: 'math',
+      name: 'ela',
       component: ela
+    },
+    {
+      path: '/ss',
+      name: 'ss',
+      component: ss 
+    },
+    {
+      path: '/science',
+      name: 'science',
+      component: science
+    },
+    {
+      path: '/dev',
+      name: 'dev',
+      component: dev
     },
     {
       path: '/about',

@@ -31,6 +31,11 @@
           <button class="navButton">SS</button>
         </router-link>
       </li>
+      <li>
+        <router-link to="/dev">
+          <button class="navButton">Dev</button>
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
