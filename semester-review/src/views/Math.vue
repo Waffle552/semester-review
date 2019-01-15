@@ -28,17 +28,17 @@
 </template>
 <script>
 export default {
-  name: "math",
+  name: 'math',
   methods: {},
-  data: function() {
+  data: function () {
     return {
       // tells the function whether or not it is hidden
       year1: false,
       year2: false,
       year3: false
-    };
+    }
   }
-};
+}
 </script>
 
 <style>

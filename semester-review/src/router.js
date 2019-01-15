@@ -29,7 +29,7 @@ export default new Router({
     {
       path: '/ss',
       name: 'ss',
-      component: ss 
+      component: ss
     },
     {
       path: '/science',
