@@ -3,7 +3,7 @@
     <ul>
       <li>
         <router-link to="/">
-          <img src="@/assets/logo.png" alt="logo">
+          <img class="navImg" src="@/assets/logo.png" alt="logo">
         </router-link>
       </li>
       <li>
@@ -72,7 +72,7 @@ ul {
 .navButton:hover {
   background-color: #303030;
 }
-a > img {
+.navImg{
   height: 50px;
   float: left;
   margin-left: 10px;

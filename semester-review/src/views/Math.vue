@@ -23,22 +23,25 @@
       class="sectionToggle"
       :class="{buttonNotHide: year3}"
     >Semester 1 2018-19</button>
-    <div v-show="year3"></div>
+    <div v-show="year3">
+      <img src="@/assets/aleks1_1-16-19.png" alt="aleks" class="mathImg">
+      <img src="@/assets/aleks2_1-16-19.png" alt="aleks" class="mathImg">
+    </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'math',
+  name: "math",
   methods: {},
-  data: function () {
+  data: function() {
     return {
       // tells the function whether or not it is hidden
       year1: false,
       year2: false,
       year3: false
-    }
+    };
   }
-}
+};
 </script>
 
 <style>
@@ -49,6 +52,6 @@ export default {
 }
 #math {
   padding: 0;
-  margin-bottom:100px;
+  margin-bottom: 100px;
 }
 </style>
