@@ -13,6 +13,10 @@
         mozallowfullscreen="true"
         webkitallowfullscreen="true"
       ></iframe>
+        <img
+        src="../assets/SS19_1_Poster.svg"
+        alt="Create a State Project Poster"
+        >
     </div>
   </div>
 </template>

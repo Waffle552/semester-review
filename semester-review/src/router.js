@@ -6,6 +6,7 @@ import ela from './views/ELA.vue'
 import ss from './views/SS.vue'
 import science from './views/Science.vue'
 import dev from './views/Dev.vue'
+import rocketUp from './views/rocketUp.vue'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/dev',
       name: 'dev',
       component: dev
+    },
+    {
+      path: '/rocketUp',
+      name: 'rocketup',
+      component: rocketUp
     },
     {
       path: '/about',
