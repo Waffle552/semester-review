@@ -1,9 +1,9 @@
 <template>
       <unity 
-    src="/Build/Web.json" 
+    src="./Build/Web.json" 
     width="1000" 
     height="600" 
-    unityLoader ="/Build/UnityLoader.js"
+    unityLoader ="./Build/UnityLoader.js"
     ref="myInstance"
     hideFooter="false"
     >
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import Unity from 'vue-unity-webgl'
+  import Unity from '@/components/Unity.vue'
   export default {
   name: "RocketUp",
   data(){
@@ -46,9 +46,9 @@
   }
   .fullscreen {
     display: block;
-    height: 100px;
+    height: 50px;
     width: 100px;
     background-color: green;
-    text-align: left
+    text-align: left;
     }
 </style>

@@ -47,4 +47,8 @@ export default {
   background-color: rgb(139, 139, 139);
   box-shadow: 10px 10px 5px grey;
 }
+body {
+  margin: 0px;
+  overflow: hidden;
+}
 </style>
