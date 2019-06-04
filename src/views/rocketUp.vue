@@ -1,8 +1,8 @@
 <template>
       <unity 
     src="./Build/Web.json" 
-    width="1000" 
-    height="600" 
+    width="900" 
+    height="200" 
     unityLoader ="./Build/UnityLoader.js"
     ref="myInstance"
     hideFooter="false"
@@ -31,24 +31,3 @@
   }
 };
 </script>
-<style>
-  
-  .bar {
-    height: 10px;
-    width: 1000px;
-    display: block;
-    background-color: grey;
-  }
-  .fill {
-    height: 100%;
-    background-color: red;
-    display: block;
-  }
-  .fullscreen {
-    display: block;
-    height: 50px;
-    width: 100px;
-    background-color: green;
-    text-align: left;
-    }
-</style>
