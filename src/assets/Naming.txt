@@ -2,3 +2,6 @@ Subject+year+"_"+projectID+"_"+"fileName"
 
 SS19:
     StateProject = 1
+
+ELA19:
+    Mark of Athena = 1

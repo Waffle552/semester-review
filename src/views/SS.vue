@@ -4,7 +4,9 @@
       <img
         src="https://denmark.headrushapp.com/fileasset/DDKx89B9JrD7EgDbF?authKey=XoJaQRnEtQknEC3Yr"
         alt="Image"
-      ><iframe
+      >
+      <br>
+      <iframe
         src="https://docs.google.com/presentation/d/e/2PACX-1vTzH2gfg9zbaSwtEu5NgjaqhxK1agEZsjA35KFT1_eBTebMv-Bjfjk7e5sUTAUfzIulLMP1d7NB625k/embed?start=false&loop=false&delayms=3000"
         frameborder="0"
         width="960"
@@ -13,10 +15,9 @@
         mozallowfullscreen="true"
         webkitallowfullscreen="true"
       ></iframe>
-        <img
-        src="../assets/SS19_1_Poster.svg"
-        alt="Create a State Project Poster"
-        >
+      <br>
+      <img class="picture" src="../assets/SS19_1_Poster.svg" alt="Create a State Project Poster">
+
     </div>
   </div>
 </template>
@@ -27,5 +28,11 @@
 .center > img {
   width: 80%;
   height: auto;
+}
+#ss {
+  padding-bottom: 500px;
+}
+.picture{
+  width: 250px;
 }
 </style>

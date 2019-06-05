@@ -30,6 +30,18 @@
         mozallowfullscreen="true"
         webkitallowfullscreen="true"
       ></iframe>
+      <h2>Extraterrestrial Exploration</h2>
+      <iframe
+        src="https://docs.google.com/presentation/d/e/2PACX-1vSRXxKdrhwiYI9swxPmIU_PPdJP68-wPhhnfk8aNK4U7QMBi2N5wqCq6W-hkkjNL8T9dh_65vxMySy2/embed?start=false&loop=false&delayms=3000"
+        frameborder="0"
+        width="960"
+        height="569"
+        allowfullscreen="true"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+      ></iframe>
+      <br>
+      <router-link to="/rocketUp">Link to the game</router-link>
     </div>
   </div>
 </template>
@@ -37,5 +49,8 @@
 <style>
 .scienceFrames {
   text-align: center;
+}
+#science {
+  padding-bottom: 400px;
 }
 </style>

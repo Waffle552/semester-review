@@ -24,14 +24,34 @@
         mozallowfullscreen="true"
         webkitallowfullscreen="true"
       ></iframe>
+      <h2>The Mark of Athena</h2>
+      <br>
+      <iframe
+        src="https://docs.google.com/presentation/d/e/2PACX-1vQfHxbQp-82k867IKesuG7cpXrTIDVDLuqEuNRd2ZB64o2aWeE_Ltrbk4TyEMWAL5-GOUZ-1y98zYc1/embed?start=false&loop=false&delayms=3000"
+        frameborder="0"
+        width="960"
+        height="569"
+        allowfullscreen="true"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+      ></iframe>
+      <br>
+      <a
+        href="https://docs.google.com/document/d/1bAuUlsNu3cvDGUeH0WqZ7tRp2WJo7jd9m1vg4o04Jws/edit?usp=sharing"
+      >Report</a>
+      <br>
+      <iframe
+        class="googleDoc"
+        src="https://docs.google.com/document/d/e/2PACX-1vRC0-fkxtmHl3uEsVp0cdCR0AlA5mmxLEIot1sMI_DQhXYlXW3nCbwRivsUthq4UtgHDqYzBMEEkL7B/pub?embedded=true"
+      ></iframe>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ela"
-};
+  name: 'ela'
+}
 </script>
 
 <style>
@@ -40,5 +60,12 @@ export default {
 }
 .frames > iframe {
   margin: 20px;
+}
+#ELA {
+  padding-bottom: 500px;
+}
+.googleDoc {
+  width: 8.5in;
+  height: 11in;
 }
 </style>
