@@ -27,6 +27,15 @@
       <img src="@/assets/aleks1_1-16-19.png" alt="aleks" class="mathImg">
       <img src="@/assets/aleks2_1-16-19.png" alt="aleks" class="mathImg">
     </div>
+    <button
+      v-on:click="year32 = !year32"
+      class="sectionToggle"
+      :class="{buttonNotHide: year32}"
+    >Semester 2 2018-19</button>
+    <div v-show="year32">
+      <img src="@/assets/aleks32_1.png" alt="aleks" class="mathImg">
+      <img src="@/assets/aleks32_2.png" alt="aleks" class="mathImg">
+    </div>
   </div>
 </template>
 <script>
@@ -38,7 +47,8 @@ export default {
       // tells the function whether or not it is hidden
       year1: false,
       year2: false,
-      year3: false
+      year3: false,
+      year32: false
     };
   }
 };
