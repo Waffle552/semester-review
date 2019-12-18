@@ -1,38 +1,72 @@
 <template>
-  <div class="home">
-    <div id="aboutMe">
-      <h1>About Me</h1>
-      <h2>Interests</h2>
-      <p>I enjoy techology and programming.</p>
+  <div id="home">
+    <div class='page_body'>
+      <h1>Semester Review</h1>
     </div>
-    <div class="frames">
-      <iframe
-        src="https://docs.google.com/document/d/e/2PACX-1vSCbqDEX0q4JjDipp-472Q-TNSxf36_4wsWCOvMeIhzIN0tZhLq39FcuATCOi-p5iaHyGFJEpZNYIqL/pub?embedded=true"
-        height="569"
-        width="960"
-      ></iframe>
+    <div class='page_footer'>
+      <a href="https://unity.com" target="_blank"><font-awesome-icon style="margin: 0px 5px;" :icon="icons.unity" :size="iconSize"/></a>
+      <a href="https://vuejs.org/" target="_blank"><font-awesome-icon style="margin: 0px 5px;" :icon="icons.vue" :size="iconSize"/></a>
+      <a href="https://www.digitalocean.com/" target="_blank"><font-awesome-icon style="margin: 0px 5px;" :icon="icons.digitalOcean" :size="iconSize"/></a>
+      <a href="https://bitbucket.org/Waffle552" target="_blank"><font-awesome-icon style="margin: 0px 5px;" :icon="icons.bitbucket" :size="iconSize"/></a>
+      <a href="https://github.com/Waffle552/" target="_blank"><font-awesome-icon style="margin: 0px 5px;" :icon="icons.github" :size="iconSize"/></a>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faUnity, faGithub, faBitbucket, faVuejs, faDigitalOcean } from '@fortawesome/free-brands-svg-icons'
 
 export default {
-  name: "home"
-};
+  name: 'Home',
+
+  data () {
+    return {
+      iconSize: '2x',
+      icons: {
+        unity: faUnity,
+        github: faGithub,
+        bitbucket: faBitbucket,
+        vue: faVuejs,
+        digitalOcean: faDigitalOcean
+      }
+    }
+  },
+
+  components: {
+    FontAwesomeIcon
+  }
+}
 </script>
 <style>
-.frames {
+#home {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-h1 {
-  padding-left: 10px;
+#home .page_footer {
+  height: 1in;
+  margin-bottom: 30px;
+  padding-left: 1cm;
+  display: flex;
+  align-items: center;
+  background: rgba(40,40,40,.25);
 }
-h2 {
-  padding-left: 30px;
+#home .page_body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 100vw;
 }
-p {
-  padding-left: 50px;
+#home .page_body h1 {
+  margin: auto;
+  font-size: 15vw
+}
+#home .page_footer a {
+  color: rgb(60,60,60);
+}
+#home .page_footer a:hover{
+  color: grey;
 }
 </style>

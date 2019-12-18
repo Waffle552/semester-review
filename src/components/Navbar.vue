@@ -1,81 +1,138 @@
 <template>
-  <div id="nav">
-    <ul>
-      <li>
-        <router-link to="/">
-          <img class="navImg" src="@/assets/logo.png" alt="logo">
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/">
-          <button class="navButton">Home</button>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/math">
-          <button class="navButton">Math</button>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/ela">
-          <button class="navButton">ELA</button>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/science">
-          <button class="navButton">Science</button>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/ss">
-          <button class="navButton">SS</button>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/dev">
-          <button class="navButton">Dev</button>
-        </router-link>
-      </li>
-    </ul>
+  <div class="mainNav">
+    <router-link class="menuItem" exact to="/"><p>Home</p></router-link>
+    <router-link class="menuItem" to="/math"><p>Math</p></router-link>
+    <router-link class="menuItem" to="/ela"><p>ELA</p></router-link>
+    <router-link class="menuItem" to="/ss"><p>Social Studies</p></router-link>
+    <router-link class="menuItem" to="/science"><p>Science</p></router-link>
+    <div class="filler"></div>
+    <a href="https://hackclub.com" class="menuImg">
+      <img class="navLogo-desktop" src="../assets/logo.png">
+      <img class="navLogo-mobile" src="https://raw.githubusercontent.com/hackclub/hackclub/master/internals/logos/hack_club_letter.png">
+    </a>
   </div>
 </template>
+
 <script>
 export default {
-  name: 'Navbar'
+  components: {
+  },
+  data () {
+    return {
+      current: ['about_us']
+    }
+  },
+  mounted () {
+    this.current = [this.$router.history.current.name]
+  },
+  methods: {
+    log: function (log) {
+      window.console.log(log)
+    }
+  }
 }
 </script>
+
 <style>
-li {
-  list-style: none;
-  display: inline;
+  .mainNav {
+  height: auto;
+  display: flex;
+  line-height: normal;
+  align-items: center;
+  width: 100vw;
+  line-height: 10px;
 }
-ul {
-  padding: 0%;
-  margin: 0%;
+.navLogo-desktop {
+  height: 35px;
 }
-#nav {
-  margin: 0%;
-  padding: 0%;
-  background-color: #1a1a1a;
-  text-align: right;
+.navLogo-mobile {
+  width: 50px;
+  display: none;
 }
-.navButton {
-  background-color: #262626;
-  border: 0px;
-  color: #ffd700;
-  width: 150px;
+.mainNav .menuImg {
+  background: rgb(50, 50, 50);
+  margin-left: auto;
+  padding-right: 10px;
+  height: 35px;
+  align-items: center;
+  display: flex;
+  font-size: 100%;
+}
+.mainNav .filler {
+  background: rgb(50, 50, 50);
+  flex: 1;
+  height: 35px;
+  color: rgba(0,0,0,0)
+}
+.mainNav .menuItem {
+  background: rgb(50, 50, 50);
+  height: 35px;
+  align-content: center;
+  display: flex;
+  padding: 0px 10px;
+}
+.mainNav .menuItem > p {
+  color: lightgrey;
+  margin: auto;
+  padding: 0px;
+  text-decoration: none;
+
+}
+.mainNav .menuItem > * {
+  display: inline-block;
+}
+.mainNav .router-link-active{
+  background-color: rgba(0,0,0,0);
+  color: white;
+  text-decoration: none;
+}
+.mainNav .router-link-active > p{
+  color: white;
+  text-decoration: none;
+}
+.mainNav .menuItem:hover > * {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+.mainNav {
+
+}
+.navLogo-desktop {
+  display: none;
+}
+.navLogo-mobile {
+  width: 50px;
+  display: flex;
+}
+.mainNav .filler {
   height: 50px;
-  margin: 3px;
-  font-size: 105%;
-  cursor: pointer;
+  display: none;
 }
-.navButton:hover {
-  background-color: #303030;
-}
-.navImg{
+.mainNav .menuItem {
   height: 50px;
-  float: left;
-  margin-left: 10px;
-  margin-top: 3px;
+  display: flex;
+  flex: 1 1 0;
 }
+.mainNav .menuItem p {
+  font-size: 70%;
+}
+.mainNav .menuImg {
+  height: 50px;
+  padding: 0px;
+}
+mainNav .router-link-active{
+  background-color: rgba(0,0,0,0);
+  color: white;
+  text-decoration: none;
+}
+.mainNav .router-link-active > p{
+  color: white;
+  text-decoration: none;
+}
+.mainNav .menuItem:hover > * {
+  color: white;
+}
+}
+
 </style>

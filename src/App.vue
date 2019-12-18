@@ -31,24 +31,12 @@ export default {
 #view > div {
   overflow: inherit;
 }
-.sectionToggle {
-  /* this is the default closed css properties for our hidding function*/
-  width: 100%;
-  font-size: 200%;
-  background-color: rgb(114, 114, 114);
-  border: 0px;
-  color: rgb(180, 180, 180);
-  border-bottom: 2px solid black;
-  display: inline-block;
-  overflow: inherit;
-  text-align: center
-}
-.buttonNotHide {
-  background-color: rgb(139, 139, 139);
-  box-shadow: 10px 10px 5px grey;
-}
 body {
   margin: 0px;
   overflow: hidden;
+  background-image: linear-gradient(45deg, #FCFC39, #FF5733)
+}
+.content {
+  flex: 1;
 }
 </style>

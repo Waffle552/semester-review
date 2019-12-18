@@ -1,57 +1,109 @@
 <template>
   <div id="math">
-    <button
-      v-on:click="year1 = !year1"
-      :class="{buttonNotHide: year1}"
-      class="sectionToggle"
-    >Semester 1 2017-18</button>
-    <div v-show="year1">
-      <img class="mathImg" src="@/assets/ALEKS1.png">
-      <img class="mathImg" src="@/assets/ALEKS2.png">
+    <div class="side">
+    <!-- Menu for images-->
+      <!-- Year 1 menu buttons -->
+      <button
+        v-on:click="dropdown0 = !dropdown0"
+        :class="{buttonNotHide: dropdown0}"
+        class="math-year-toggle math-menu-style"
+      >Year 1 2017-18</button>
+
+      <button
+        v-on:click="switch_img('y1_sem1')"
+        :class="{buttonNotHide: active === 'y1_sem1'}"
+        class="math-toggler math-menu-style"
+        v-if="dropdown0"
+        >Semester 1</button>
+      <button
+        v-on:click="switch_img('y1_sem2')"
+        class="math-toggler math-menu-style"
+        :class="{buttonNotHide: active === 'y1_sem2'}"
+        v-if="dropdown0"
+        >Semester 2</button>
+
+    <!-- Year 2 menu buttons -->
+      <button
+        v-on:click="dropdown1 = !dropdown1"
+        :class="{buttonNotHide: dropdown1}"
+        class="math-year-toggle math-menu-style"
+        >Year 2 2018-19</button>
+
+      <button
+        v-on:click="switch_img('y2_sem1')"
+        class="math-toggler math-menu-style"
+        :class="{buttonNotHide: active === 'y2_sem1'}"
+        v-if="dropdown1"
+        >Semester 1</button>
+      <button
+        v-on:click="switch_img('y2_sem2')"
+        class="math-toggler math-menu-style"
+        :class="{buttonNotHide: active === 'y2_sem2'}"
+        v-if="dropdown1"
+        >Semester 2</button>
+
+    <!-- Year 3 -->
+      <button
+        v-on:click="dropdown2 = !dropdown2"
+        :class="{buttonNotHide: dropdown2}"
+        class="math-year-toggle math-menu-style"
+        >Year 3 2019-20</button>
     </div>
-    <button
-      v-on:click="year2 = !year2"
-      class="sectionToggle"
-      :class="{buttonNotHide: year2}"
-    >Semester 2 2017-18</button>
-    <div v-show="year2">
-      <img class="mathImg" src="@/assets/ALEKS4.png">
-      <img class="mathImg" src="@/assets/ALEKS5.png">
-    </div>
-    <button
-      v-on:click="year3 = !year3"
-      class="sectionToggle"
-      :class="{buttonNotHide: year3}"
-    >Semester 1 2018-19</button>
-    <div v-show="year3">
-      <img src="@/assets/aleks1_1-16-19.png" alt="aleks" class="mathImg">
-      <img src="@/assets/aleks2_1-16-19.png" alt="aleks" class="mathImg">
-    </div>
-    <button
-      v-on:click="year32 = !year32"
-      class="sectionToggle"
-      :class="{buttonNotHide: year32}"
-    >Semester 2 2018-19</button>
-    <div v-show="year32">
-      <img src="@/assets/aleks32_1.png" alt="aleks" class="mathImg">
-      <img src="@/assets/aleks32_2.png" alt="aleks" class="mathImg">
+
+    <div class="content">
+    <!-- Images -->
+      <!-- Year 1 -->
+      <div v-if="active === 'y1_sem1'">
+        <img class="mathImg" src="@/assets/mathScreenshots/year1/semester1/percent.png" v-on:click="percent = !percent" v-if="percent">
+        <img class="mathImg" src="@/assets/mathScreenshots/year1/semester1/number.png" v-on:click="percent = !percent" v-if="!percent">
+      </div>
+      <div v-show="active === 'y1_sem2'">
+        <img class="mathImg" src="@/assets/mathScreenshots/year1/semester2/percent.png" v-on:click="percent = !percent" v-if="percent">
+        <img class="mathImg" src="@/assets/mathScreenshots/year1/semester2/number.png" v-on:click="percent = !percent" v-if="!percent">
+      </div>
+
+      <!-- Year 2 -->
+      <div v-if="active === 'y2_sem1'">
+        <img src="@/assets/mathScreenshots/year2/semester1/percent.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="percent">
+        <img src="@/assets/mathScreenshots/year2/semester1/number.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="!percent">
+      </div>
+      <div v-if="active === 'y2_sem2'">
+        <img src="@/assets/mathScreenshots/year2/semester2/percent.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="percent">
+        <img src="@/assets/mathScreenshots/year2/semester2/number.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="!percent">
+      </div>
+
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "math",
-  methods: {},
-  data: function() {
+  name: 'math',
+  methods: {
+    switch_img: function (id) {
+      if (this.active === id) {
+        this.active = 'none'
+      } else {
+        this.active = id
+      }
+      this.percent = true
+    }
+  },
+  data: function () {
     return {
-      // tells the function whether or not it is hidden
-      year1: false,
-      year2: false,
-      year3: false,
-      year32: false
-    };
+      active: 'y3_sem1',
+      // year[year number]_sem[semester number]
+      percent: true,
+      // year 1
+      dropdown0: false,
+
+      // year 2
+      dropdown1: false,
+
+      // year 3
+      dropdown2: true
+    }
   }
-};
+}
 </script>
 
 <style>
@@ -62,6 +114,36 @@ export default {
 }
 #math {
   padding: 0;
-  margin-bottom: 100px;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+}
+#math .side {
+  width: 10%;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+#math .content {
+  margin-right: 10%;
+}
+.math-menu-style {
+  background: rgba(0,0,0,0);
+  border: 0px;
+  color: grey;
+  text-align: left;
+}
+.math-year-toggle {
+  padding-left: 20px;
+}
+.math-toggler {
+  padding-left: 30px;
+}
+.math-menu-style:hover {
+  color: #9C9999;
+}
+.math-menu-style.buttonNotHide {
+  color: white;
+  box-shadow: none;
 }
 </style>

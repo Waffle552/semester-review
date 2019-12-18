@@ -1,18 +1,5 @@
 <template>
   <div id="ELA">
-    <h1>2017-2018</h1>
-    <div class="frames">
-      <iframe
-        src="https://docs.google.com/document/d/e/2PACX-1vSpo_8JWY27rLjPxhnXdr9TMX6zBpl2_F0QhBoSlAtqervFzZZrvPxc5KfXPRM2tz9AR3eOoON499Nq/pub?embedded=true"
-        width="960"
-        height="569"
-      ></iframe>
-      <iframe
-        src="https://docs.google.com/document/d/e/2PACX-1vTzyoaP6fMrnNdJnBRjuXkjRb5HxQUn5VDAVXp4qsjy7Q28HQN-pI_RX93KTop-sM10XqtZHhsgU8bE/pub?embedded=true"
-        width="960"
-        height="569"
-      ></iframe>
-    </div>
     <h1>2018-2019</h1>
     <div class="frames">
       <iframe
@@ -45,6 +32,19 @@
         src="https://docs.google.com/document/d/e/2PACX-1vRC0-fkxtmHl3uEsVp0cdCR0AlA5mmxLEIot1sMI_DQhXYlXW3nCbwRivsUthq4UtgHDqYzBMEEkL7B/pub?embedded=true"
       ></iframe>
     </div>
+    <h1>2017-2018</h1>
+    <div class="frames">
+      <iframe
+        src="https://docs.google.com/document/d/e/2PACX-1vSpo_8JWY27rLjPxhnXdr9TMX6zBpl2_F0QhBoSlAtqervFzZZrvPxc5KfXPRM2tz9AR3eOoON499Nq/pub?embedded=true"
+        width="960"
+        height="569"
+      ></iframe>
+      <iframe
+        src="https://docs.google.com/document/d/e/2PACX-1vTzyoaP6fMrnNdJnBRjuXkjRb5HxQUn5VDAVXp4qsjy7Q28HQN-pI_RX93KTop-sM10XqtZHhsgU8bE/pub?embedded=true"
+        width="960"
+        height="569"
+      ></iframe>
+    </div>
   </div>
 </template>
 
@@ -62,7 +62,8 @@ export default {
   margin: 20px;
 }
 #ELA {
-  padding-bottom: 500px;
+  text-align: center;
+  padding-bottom: 400px;
 }
 .googleDoc {
   width: 8.5in;
