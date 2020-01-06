@@ -27,6 +27,7 @@ export default {
 #view {
   overflow-y: auto;
   height: 100vh;
+  width: 100vw;
 }
 #view > div {
   overflow: inherit;

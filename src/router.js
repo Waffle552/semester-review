@@ -6,6 +6,7 @@ import ela from './views/ELA.vue'
 import ss from './views/SS.vue'
 import science from './views/Science.vue'
 import rocketUp from './views/rocketUp.vue'
+import smartGoals from './views/smartGoals'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/rocketUp',
       name: 'rocketup',
       component: rocketUp
+    },
+    {
+      path: '/smartgoals',
+      name: 'smartgoals',
+      component: smartGoals
     }
   ]
 })

@@ -1,14 +1,15 @@
 <template>
   <div class="mainNav">
     <router-link class="menuItem" exact to="/"><p>Home</p></router-link>
+    <router-link class="menuItem" to="/smartgoals"><p>Smart Goals</p></router-link>
     <router-link class="menuItem" to="/math"><p>Math</p></router-link>
     <router-link class="menuItem" to="/ela"><p>ELA</p></router-link>
     <router-link class="menuItem" to="/ss"><p>Social Studies</p></router-link>
     <router-link class="menuItem" to="/science"><p>Science</p></router-link>
     <div class="filler"></div>
-    <a href="https://hackclub.com" class="menuImg">
+    <a href="https://www.denmark.k12.wi.us/schools/dcs/" class="menuImg">
       <img class="navLogo-desktop" src="../assets/logo.png">
-      <img class="navLogo-mobile" src="https://raw.githubusercontent.com/hackclub/hackclub/master/internals/logos/hack_club_letter.png">
+      <img class="navLogo-mobile" src="../assets/logo.png">
     </a>
   </div>
 </template>
