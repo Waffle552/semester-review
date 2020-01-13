@@ -12,6 +12,13 @@
         webkitallowfullscreen="true"
       ></iframe>
       <br>
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vQi19CxkWY3S-ytaXRWFiXfHPZ5V-9azcbzk13dBSMYEJxGtJcUhhhmds_uANPlksSmStO8RAEnSGGI/pub?embedded=true"
+        frameborder="0"
+        width="960"
+        height="569"
+
+      ></iframe>
+      <br>
       <h1>2018-2019</h1>
       <br>
       <img class="picture" src="../assets/SS19_1_Poster.svg" alt="State Project Poster">

@@ -48,6 +48,13 @@
         :class="{buttonNotHide: dropdown2}"
         class="math-year-toggle math-menu-style"
         >Year 3 2019-20</button>
+
+        <button
+        v-on:click="switch_img('y3_sem1')"
+        class="math-toggler math-menu-style"
+        :class="{buttonNotHide: active === 'y3_sem1'}"
+        v-if="dropdown2"
+        >Semester 2</button>
     </div>
 
     <div class="content">
@@ -70,6 +77,12 @@
       <div v-if="active === 'y2_sem2'">
         <img src="@/assets/mathScreenshots/year2/semester2/percent.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="percent">
         <img src="@/assets/mathScreenshots/year2/semester2/number.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="!percent">
+      </div>
+
+      <!-- Year 3 -->
+      <div v-if="active === 'y3_sem1'">
+        <img src="@/assets/mathScreenshots/year3/semester1/percent.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="percent">
+        <img src="@/assets/mathScreenshots/year3/semester1/number.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="!percent">
       </div>
 
     </div>
