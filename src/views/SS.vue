@@ -2,6 +2,7 @@
   <div id="ss">
     <div class="center">
       <h1>2019-2020</h1>
+      <p><a href = 'https://docs.google.com/presentation/d/1fd56t_GU93mJLa8abxPe7CanLMbMxdrM7oR4NiUM6Uk'>War Project Presentation</a></p>
       <br>
       <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQKOdL5cuvsfbfM5ufQhyEz2BzTrO70Ta4KsHpHkSqSW9QlLv4ldYEZGrsW3T5t95o6Koe2Mab7zCpU/embed?start=false&loop=false&delayms=3000"
         frameborder="0"

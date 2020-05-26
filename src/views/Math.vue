@@ -54,6 +54,12 @@
         class="math-toggler math-menu-style"
         :class="{buttonNotHide: active === 'y3_sem1'}"
         v-if="dropdown2"
+        >Semester 1</button>
+        <button
+        v-on:click="switch_img('y3_sem2')"
+        class="math-toggler math-menu-style"
+        :class="{buttonNotHide: active === 'y3_sem2'}"
+        v-if="dropdown2"
         >Semester 2</button>
     </div>
 
@@ -83,6 +89,10 @@
       <div v-if="active === 'y3_sem1'">
         <img src="@/assets/mathScreenshots/year3/semester1/percent.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="percent">
         <img src="@/assets/mathScreenshots/year3/semester1/number.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="!percent">
+      </div>
+      <div v-if="active === 'y3_sem2'">
+        <img src="@/assets/mathScreenshots/year3/semester2/percent.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="percent">
+        <img src="@/assets/mathScreenshots/year3/semester2/number.png" alt="aleks" class="mathImg" v-on:click="percent = !percent" v-if="!percent">
       </div>
 
     </div>
